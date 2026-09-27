@@ -103,7 +103,7 @@ public class GithubReleaseClient
 
             await ZipFile.ExtractToDirectoryAsync(zipStream, outputPath, overwriteFiles: overwriteFiles);
 
-            yield return ProgressStatus.Completed("Successfully downloaded release!");
+            yield return ProgressStatus.Completed();
             yield break;
         }
     }

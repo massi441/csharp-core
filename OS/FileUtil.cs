@@ -6,9 +6,9 @@
 public static class FileUtil
 {
     /// <summary>
-    /// Returns BaseDirectory from the AppContext (the directory where the file is currentlye executing
+    /// Returns the directory of where the currently executing file is located
     /// </summary>
-    public static string GetRunningDir()
+    public static string GetExecutingDirectory()
     {
         return AppContext.BaseDirectory;
     }

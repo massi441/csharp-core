@@ -62,7 +62,7 @@ public class ProgressStatus
         };
     }
 
-    public static ProgressStatus Success()
+    public static ProgressStatus Completed()
     {
         return new ProgressStatus()
         {
