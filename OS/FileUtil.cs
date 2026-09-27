@@ -24,46 +24,30 @@ public static class FileUtil
 
     /// <summary>
     /// Deletes a directory if it exists, and returns true if it did.
-    /// Returns false if an exception is thrown.
     /// </summary>
     public static bool DeleteDirIfExists(string path, bool recursive = true)
     {
-        try
+        if (Directory.Exists(path))
         {
-            if (Directory.Exists(path))
-            {
-                Directory.Delete(path, recursive);
-                return true;
-            }
+            Directory.Delete(path, recursive);
+            return true;
+        }
 
-            return false;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
+        return false;
     }
 
     /// <summary>
     /// Deletes a file if it exists, and returns true if it did.
-    /// Returns false if an exception is thrown.
     /// </summary>
     public static bool DeleteFileIfExists(string path)
     {
-        try
+        if (File.Exists(path))
         {
-            if (File.Exists(path))
-            {
-                File.Delete(path);
-                return true;
-            }
+            File.Delete(path);
+            return true;
+        }
 
-            return false;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
+        return false;
     }
 
     /// <summary>
