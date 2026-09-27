@@ -5,9 +5,9 @@ namespace Core.Memory;
 
 /// <summary>
 /// A wrapper around a rented byte buffer from the array pool, with an atomic reference counter.
-/// A rented buffer automatically returns its rented array to the array pool once it is dispoed and its reference counter reaches 0
+/// A shared buffer automatically returns its rented array to the array pool once it is dispoed, and its reference counter reaches 0
 /// </summary>
-internal class RentedBuffer : IDisposable
+public class RentedBuffer : IDisposable
 {
     private byte[] _ref;
     private int _usedBytes;

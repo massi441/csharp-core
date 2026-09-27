@@ -8,7 +8,7 @@ namespace Core.Memory;
 /// Represents a length prefixed string in a raw memory stream
 /// </summary>
 /// <typeparam name="TLengthPrefix">The type of the length prefix</typeparam>
-internal struct StreamStringView<TLengthPrefix> where TLengthPrefix : unmanaged, IBinaryInteger<TLengthPrefix>
+public struct StreamStringView<TLengthPrefix> where TLengthPrefix : unmanaged, IBinaryInteger<TLengthPrefix>
 {
     [RequiredField]
     private TLengthPrefix _length;

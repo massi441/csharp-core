@@ -9,7 +9,7 @@ namespace Core.Memory;
 /// </summary>
 /// <typeparam name="TLengthPrefix">The type of the length prefix (must be of intergral type)</typeparam>
 /// <typeparam name="T">The type of element stored in the stream</typeparam>
-internal ref struct StreamSpanView<TLengthPrefix, T> 
+public ref struct StreamSpanView<TLengthPrefix, T> 
     where TLengthPrefix : unmanaged, IBinaryInteger<TLengthPrefix>
     where T : unmanaged
 {

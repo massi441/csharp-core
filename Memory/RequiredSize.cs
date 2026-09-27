@@ -10,7 +10,7 @@ namespace Core.Memory;
 /// A reflection helper class for computing the minimum and maxium byte size of a struct
 /// </summary>
 /// <typeparam name="T">The type of struct to measure the size of</typeparam>
-internal static class RequiredSize<T> where T : struct, allows ref struct
+public static class RequiredSize<T> where T : struct, allows ref struct
 {
     public static readonly ushort MinSize;
     public static readonly ushort MaxSize;

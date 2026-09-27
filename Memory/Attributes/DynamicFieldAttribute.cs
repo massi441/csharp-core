@@ -7,7 +7,7 @@
 /// for the maximum size.
 /// </summary>
 [AttributeUsage(AttributeTargets.Field)]
-internal class DynamicFieldAttribute : Attribute
+public class DynamicFieldAttribute : Attribute
 {
     /// <summary>
     /// The largest payload the field can hold in bytes, excluding the fixed part of the field type

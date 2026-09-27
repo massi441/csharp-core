@@ -7,7 +7,7 @@
 /// <see cref="Type"/> towards the maximum size.
 /// </summary>
 [AttributeUsage(AttributeTargets.Field)]
-internal class DynamicRepeatedFieldAttribute : Attribute
+public class DynamicRepeatedFieldAttribute : Attribute
 {
     /// <summary>
     /// The type of a single element the field repeats, which is measured instead of the field type

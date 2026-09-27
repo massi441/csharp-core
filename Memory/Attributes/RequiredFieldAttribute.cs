@@ -6,7 +6,7 @@
 /// towards both the minimum and the maximum size of the containing struct.
 /// </summary>
 [AttributeUsage(AttributeTargets.Field)]
-internal sealed class RequiredFieldAttribute : Attribute
+public sealed class RequiredFieldAttribute : Attribute
 {
 
 }
