@@ -24,4 +24,26 @@ public static class ProcessUtil
 
         return closedCount;
     }
+
+    /// <summary>
+    /// Starts a process in a new console
+    /// </summary>
+    public static Process? StartNewProcess(string processPath)
+    {
+        ProcessStartInfo startupInfo = new ProcessStartInfo(processPath)
+        {
+            UseShellExecute = true
+        };
+
+        return Process.Start(startupInfo);
+    }
+
+    /// <summary>
+    /// Starts a process in a new console
+    /// </summary>
+    /// <returns>true if the process was started, false otherwise</returns>
+    public static bool TryStartNewProcess(string processPath)
+    {
+        return StartNewProcess(processPath) != null;
+    }
 }
