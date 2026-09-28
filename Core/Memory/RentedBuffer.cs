@@ -18,6 +18,10 @@ public class RentedBuffer : IDisposable
     public byte[] Ref => _ref;
     public int RefCount => _refCounter.Count;
 
+    /// <summary>
+    /// Rents an array of the specified size from the array pool and automatically acquires a reference to it.
+    /// The caller of this constructor is responsible for managing the ownership of the buffer
+    /// </summary>
     public RentedBuffer(int size)
     {
         _ref = ArrayPool<byte>.Shared.Rent(size);
@@ -66,6 +70,11 @@ public class RentedBuffer : IDisposable
         }
 
         return false;
+    }
+
+    public bool IsReleased()
+    {
+        return Ref == null;
     }
 
     public void Restrict(int usedBytes)
